@@ -1,0 +1,17 @@
+All the methods left in the Functions file:
+1) getImages - I left this in the functions file because I really couldn’t find a reason to move it. It takes in arguments that aren’t associated with any of the other functions. All it is doing is getting images from a map and returning it as a list. Therefore there is no reason to put it elsewhere.
+
+2) clamp - this was left in Functions because it’s simply returning the value in-between two numbers. This is a fairly simple computation and doesn’t involve any other methods, therefore it was left in Functions. 
+
+Methods that can be placed elsewhere:
+1) getImages - I put this in Background because background has a private instance variable defined to be a list of images which is what getImages returns. However i believe it could’ve also been left in Functions. 
+
+2) TransformNotFull/Full - this can be put in multiple other files like WorldModel and EventScheduler since these methods are creating entities. I put these methods in Entity since there was a ton of manipulation involving entities.
+
+3)execute______Activity - these methods could’ve gone WorldModel or EventScheduler since they are activating movements, quakes, etc… for various entities. I put these methods in entity since they are acting on entities themselves. i could also see further down the line creating separate methods such as Crab, Fish, etc… which represent each entity which could then have executeCrabActivity, executeFishActivity, etc…  in each method respectively.
+
+4) getCurrentImage - This method was a tricky one. I could see it going in WorldView since it’s retrieving the current image of an entity which has to do how the game looks. I put it in both entity and background since it’s affecting both methods. 
+
+5) createAnimationAction/createActivityAction - i could see these methods being put in either entity or Action. This is because these methods will be creating either an animation or action for each entity. These methods are doing a type of action which is why it could be placed in Action.
+
+6)create____ - These methods could have gone in either Functions or Entity since it is creating a new entity and each entity is unique from one another. I decided to put it in WorldModel since WorldModel keeps track of what’s in the world in terms of the entities and background elements. In the future, if we were to create separate methods for Crab, Fish, etc…I could see each create method being put into those Crab, Fish, etc… methods respectively.
